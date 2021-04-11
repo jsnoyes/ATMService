@@ -24,6 +24,8 @@ namespace ATMService
 
         public IConfiguration Configuration { get; }
 
+        private const string CorsPolicyName = "AtmPolicy";
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -33,11 +35,24 @@ namespace ATMService
 
             services.AddTransient<IDenominationService, DenominationService>();
             services.AddSwaggerGen();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(CorsPolicyName,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(CorsPolicyName);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
