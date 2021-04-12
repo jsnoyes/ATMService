@@ -157,7 +157,7 @@ namespace ATMService.Test.Services
         }
 
         [Fact]
-        public void Withdraw_ShouldRestock()
+        public void Restock_ShouldRestock()
         {
             // Arrange
             var daoMock = new Mock<IJSonDao>();
@@ -196,7 +196,7 @@ namespace ATMService.Test.Services
         }
 
         [Fact]
-        public void Withdraw_ShouldNotRestockInvalidDenominations()
+        public void Restock_ShouldNotRestockInvalidDenominations()
         {
             // Arrange
             var daoMock = new Mock<IJSonDao>();
@@ -218,7 +218,7 @@ namespace ATMService.Test.Services
         }
 
         [Fact]
-        public void Withdraw_ShouldNotRestockNegativeCounts()
+        public void Restock_ShouldNotRestockNegativeCounts()
         {
             // Arrange
             var daoMock = new Mock<IJSonDao>();

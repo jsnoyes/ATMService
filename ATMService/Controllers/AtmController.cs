@@ -25,9 +25,16 @@ namespace ATMService.Controllers
         {
             try
             {
+                if (requestedAmount < 0)
+                    throw new InvalidAtmOperationException($"You may not withdraw negative amounts. Requested amount: {requestedAmount}");
+
                 var history = _denomService.Withdraw(requestedAmount);
 
                 return Ok(FormatTransaction(history));
+            }
+            catch (InvalidAtmOperationException iaoe)
+            {
+                return BadRequest(iaoe.Message);
             }
             catch
             {
