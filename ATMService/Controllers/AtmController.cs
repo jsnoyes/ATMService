@@ -20,6 +20,11 @@ namespace ATMService.Controllers
             _denomService = denomService;
         }
 
+        /// <summary>
+        /// Withdraw the requested amount from the ATM.
+        /// </summary>
+        /// <param name="requestedAmount">Dollar amount requested from the ATM.</param>
+        /// <returns>Description of the action that the ATM took.</returns>
         [HttpPost("/withdraw/{requestedAmount}")]
         public ActionResult Withdraw(int requestedAmount)
         {
