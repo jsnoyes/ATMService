@@ -1,0 +1,8 @@
+[
+  { "Denomination":  100, "Count": 10 },
+  { "Denomination": 50, "Count": 10 },
+  { "Denomination": 20, "Count": 10 },
+  { "Denomination": 10, "Count": 10 },
+  { "Denomination": 5, "Count": 10 },
+  { "Denomination": 1, "Count": 10 }
+]

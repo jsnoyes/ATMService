@@ -19,6 +19,7 @@ namespace ATMService.Gateway.Controllers
         private readonly string _getHistoryUrl;
         private readonly string _withdrawUrl;
         private readonly string _restockUrl;
+        private readonly string _addHistoryUrl;
 
         public GatewayController(IHttpClientFactory httpClientFactory, IConfiguration config)
         {
@@ -27,7 +28,7 @@ namespace ATMService.Gateway.Controllers
             _getHistoryUrl = config["urls:getHistory"];
             _withdrawUrl = config["urls:withdraw"];
             _restockUrl = config["urls:restock"];
-
+            _addHistoryUrl = config["urls:addHistory"];
         }
 
         [HttpGet("/overview")]
@@ -35,6 +36,9 @@ namespace ATMService.Gateway.Controllers
 
         [HttpGet("/history")]
         public async Task<IActionResult> GetHistory() => await ProxyTo(_getHistoryUrl);
+
+        [HttpPost("/history")]
+        public async Task<IActionResult> AddHistory([FromQuery] int amount, [FromQuery] bool isSuccess) => await ProxyPostTo($"{_addHistoryUrl}?amount={amount}&isSuccess={isSuccess}", HttpContext.Request);
 
         [HttpPost("/withdraw/{requestedAmount}")]
         public async Task<IActionResult> Withdraw(int requestedAmount) => await ProxyPostTo($"{_withdrawUrl}/{requestedAmount}", HttpContext.Request);

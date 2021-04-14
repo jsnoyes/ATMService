@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMService.Test", "ATMServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMService.Gateway", "ATMService.Gateway\ATMService.Gateway.csproj", "{8209091C-5FBB-4E6F-921B-B35D76A2DB28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMService.Services.History", "ATMService.Services.History\ATMService.Services.History.csproj", "{8E9A2953-B52C-4C69-B908-545091193E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMService.Services.Denominations", "ATMService.Services.Denominations\ATMService.Services.Denominations.csproj", "{7F61B083-9BFA-44B8-8ABD-5ABE4967B962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMService.Services.Shared", "ATMService.Services.Shared\ATMService.Services.Shared.csproj", "{D2609872-A13F-4133-A503-511244E6CBD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{8209091C-5FBB-4E6F-921B-B35D76A2DB28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8209091C-5FBB-4E6F-921B-B35D76A2DB28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8209091C-5FBB-4E6F-921B-B35D76A2DB28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E9A2953-B52C-4C69-B908-545091193E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E9A2953-B52C-4C69-B908-545091193E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E9A2953-B52C-4C69-B908-545091193E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E9A2953-B52C-4C69-B908-545091193E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F61B083-9BFA-44B8-8ABD-5ABE4967B962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F61B083-9BFA-44B8-8ABD-5ABE4967B962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F61B083-9BFA-44B8-8ABD-5ABE4967B962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F61B083-9BFA-44B8-8ABD-5ABE4967B962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2609872-A13F-4133-A503-511244E6CBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2609872-A13F-4133-A503-511244E6CBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2609872-A13F-4133-A503-511244E6CBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2609872-A13F-4133-A503-511244E6CBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
