@@ -47,6 +47,9 @@ namespace ATMService.Controllers
             }
         }
 
+        /// <summary>
+        /// Get descriptions of the full history of withdrawals at the ATM.
+        /// </summary>
         [HttpGet("/history")]
         public ActionResult GetHistories()
         {
@@ -64,6 +67,9 @@ namespace ATMService.Controllers
             }
         }
 
+        /// <summary>
+        /// Get the available counts of each denomination.
+        /// </summary>
         [HttpGet("/overview")]
         public ActionResult GetOverview()
         {
@@ -77,6 +83,11 @@ namespace ATMService.Controllers
             }
         }
 
+        /// <summary>
+        /// Add counts to the stored denominations.
+        /// </summary>
+        /// <param name="stock">The counts of each denomination to add the to stored counts in the ATM.</param>
+        /// <returns>The total count of each denomination existing in the ATM.</returns>
         [HttpPost("/restock")]
         public ActionResult Restock([FromBody] List<DenominationModel> denominations)
         {
